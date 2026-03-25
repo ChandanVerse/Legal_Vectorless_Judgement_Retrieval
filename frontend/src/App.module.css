@@ -11,20 +11,39 @@
   flex-direction: column;
   overflow: hidden;
   background: var(--vellum);
+  position: relative;
 }
 
-/* ── Thin vermillion rule ── */
+/* Subtle radial glow behind content */
+.chamber::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140%;
+  height: 60%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(79, 209, 197, 0.025) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Accent rule ── */
 .goldRule {
   height: 1px;
   background: linear-gradient(
     90deg,
     transparent 0%,
-    var(--vermillion) 20%,
-    var(--vermillion) 80%,
+    var(--rule) 20%,
+    var(--rule) 80%,
     transparent 100%
   );
   flex-shrink: 0;
-  opacity: 0.2;
+  opacity: 0.5;
 }
 
 /* ── Scrollable transcript area ── */
@@ -33,4 +52,6 @@
   overflow-y: auto;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
 }

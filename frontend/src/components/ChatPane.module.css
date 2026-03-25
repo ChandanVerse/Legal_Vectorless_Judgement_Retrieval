@@ -1,15 +1,8 @@
 .pane {
   flex: 1;
   overflow-y: auto;
-  /* Ruled paper effect on the transcript */
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent 0px,
-    transparent calc(1.75em * 16px / 16px - 1px),
-    rgba(155, 140, 115, 0.065) calc(1.75em * 16px / 16px - 1px),
-    rgba(155, 140, 115, 0.065) calc(1.75em * 16px / 16px)
-  );
-  background-size: 100% 1.75em;
+  /* Clean dark background — no ruled lines */
+  background: var(--vellum);
 }
 
 /* ── Empty state ── */
@@ -26,8 +19,9 @@
 
 .emptyIcon {
   color: var(--vermillion);
-  opacity: 0.1;
+  opacity: 0.12;
   margin-bottom: 8px;
+  filter: drop-shadow(0 0 16px rgba(79, 209, 197, 0.1));
 }
 
 .emptyTitle {

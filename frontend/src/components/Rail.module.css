@@ -14,7 +14,7 @@
   width: 48px;
 }
 
-/* Aged paper grain overlay */
+/* Subtle vertical noise texture */
 .rail::after {
   content: '';
   position: absolute;
@@ -23,9 +23,9 @@
     repeating-linear-gradient(
       0deg,
       transparent,
-      transparent 28px,
-      rgba(160, 140, 110, 0.06) 28px,
-      rgba(160, 140, 110, 0.06) 29px
+      transparent 48px,
+      rgba(255, 255, 255, 0.012) 48px,
+      rgba(255, 255, 255, 0.012) 49px
     );
   pointer-events: none;
 }
@@ -40,7 +40,7 @@
 
 .brandIcon {
   color: var(--vermillion);
-  opacity: 0.7;
+  opacity: 0.8;
   display: block;
   margin-bottom: 14px;
 }
@@ -68,16 +68,16 @@
   width: 100%;
   background: transparent;
   border: 1px solid var(--rule);
-  border-radius: 2px;
+  border-radius: 6px;
   color: var(--vermillion);
   font-family: var(--f-mono);
   font-size: 8px;
   font-weight: 400;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  padding: 9px 12px;
+  padding: 10px 12px;
   cursor: pointer;
-  transition: background 0.18s, border-color 0.18s;
+  transition: background 0.18s, border-color 0.18s, box-shadow 0.18s;
   display: flex;
   align-items: center;
   gap: 9px;
@@ -86,6 +86,7 @@
 .newBtn:hover:not(:disabled) {
   background: var(--verm-dim);
   border-color: var(--vermillion);
+  box-shadow: 0 0 12px rgba(79, 209, 197, 0.08);
 }
 
 .newBtn:disabled {
@@ -123,7 +124,7 @@
 .collapseBtn {
   background: transparent;
   border: 1px solid var(--rule-soft);
-  border-radius: 2px;
+  border-radius: 4px;
   color: var(--ink-4);
   font-family: var(--f-mono);
   font-size: 9px;
@@ -134,7 +135,7 @@
 }
 
 .collapseBtn:hover {
-  border-color: var(--rule);
+  border-color: var(--ink-3);
   color: var(--ink-3);
 }
 
@@ -152,14 +153,14 @@
 
 .stripIcon {
   color: var(--vermillion);
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 .stripBtn,
 .stripToggle {
   background: transparent;
   border: 1px solid var(--rule-soft);
-  border-radius: 2px;
+  border-radius: 4px;
   color: var(--ink-4);
   font-family: var(--f-mono);
   font-size: 13px;
